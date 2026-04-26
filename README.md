@@ -2,14 +2,14 @@
 
 ApertarCore is a libcamera-based capture backend for Raspberry Pi camera systems. It manages camera configuration, preview delivery, recording, still capture, and control-state synchronization for Apertar-UI.
 
-It is designed for touch-driven, embedded camera workflows on Raspberry Pi 5, with a focus on low-latency preview, reliable raw capture, and a clean separation between the UI and the capture pipeline.
+It is designed for embedded camera workflows on Raspberry Pi 5, with a focus on low-latency preview, reliable raw capture, and a clean separation between the UI and the capture pipeline.
 
 ## Highlights
 
 - Direct camera control through libcamera
 - Dual-stream capture pipeline:
-  - preview stream for the UI
-  - raw stream for recording and stills
+    - preview stream for the UI
+   - raw stream for recording and stills
 - Low-latency preview transport over a Unix socket with DMA-BUF file descriptor passing
 - cDNG sequence recording
 - DNG still capture
@@ -138,37 +138,12 @@ printf '{"cmd":"record_start"}\n' | socat - UNIX-CONNECT:/tmp/apertar-core.sock
 printf '{"cmd":"record_stop"}\n' | socat - UNIX-CONNECT:/tmp/apertar-core.sock
 ```
 
-See:
-
-- [Control protocol](docs/control-protocol.md)
-- [DNG writer notes](docs/dng-writer.md)
-
 ## Output Layout
 
 - cDNG recordings are written under the selected media root
 - Still captures are written to a `Photos` folder under the media root
 - Clip and still naming are date-based with incrementing clip counters
 
-## Project Structure
-
-```text
-ApertarCore/
-├── docs/
-│   ├── control-protocol.md
-│   └── dng-writer.md
-├── scripts/
-│   └── smoke-test.sh
-├── src/
-│   ├── camera/
-│   ├── cdng/
-│   ├── ipc/
-│   └── ...
-├── CMakeLists.txt
-└── README.md
-```
-
 ## Notes
-
-- ApertarCore is intended to be the source of truth for camera state
 - The UI should treat preview delivery as transient and non-blocking
 - Sensor-specific limits and capture behavior are handled in the backend, not the UI
