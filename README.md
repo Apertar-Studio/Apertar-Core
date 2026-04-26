@@ -147,3 +147,6 @@ printf '{"cmd":"record_stop"}\n' | socat - UNIX-CONNECT:/tmp/apertar-core.sock
 ## Notes
 - The UI should treat preview delivery as transient and non-blocking
 - Sensor-specific limits and capture behavior are handled in the backend, not the UI
+
+## Credit
+- Inspiration has been taken from Schoolpost's project cinepi-raw: https://github.com/cinepi/cinepi-raw
