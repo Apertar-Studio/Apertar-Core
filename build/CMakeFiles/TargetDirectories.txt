@@ -1,0 +1,7 @@
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/apertar-core.dir
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/edit_cache.dir
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/rebuild_cache.dir
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/list_install_components.dir
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/install.dir
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/install/local.dir
+/home/donii/projects/cinepi_qt_preview/ApertarCore/build/CMakeFiles/install/strip.dir
